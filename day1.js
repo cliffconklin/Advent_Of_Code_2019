@@ -1,12 +1,20 @@
 // Day 1
-var fs = require('fs')
+// var fs = require('fs')
 
-try {
-    var contents = fs.readFileSync('./day1_input.txt', 'utf8')
-} catch (err) {
-    console.error(err)
-}
-const input = contents.split('\n')
+// try {
+//     var contents = fs.readFileSync('./day1_input.txt', 'utf8')
+// } catch (err) {
+//     console.error(err)
+// }
+// const input = contents.split('\n')
+// console.log(input)
+
+const fs = require('fs')
+const input = fs
+    .readFileSync('day2_input.txt', 'utf8')
+    .split(',')
+    .map(Number)
+
 console.log(input)
 
 class fuelCalculator {
